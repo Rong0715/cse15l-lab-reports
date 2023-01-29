@@ -5,7 +5,7 @@ This tutorial will cover 3 steps for students to understand remote access:
 * Trying some cammands
 
 ## Installing VScode
-The latest version of VScode could be found here: [link](https://code.visualstudio.com/).
+The latest version of VScode could be found here: [link](https://code.visualstudio.com/). VS Code is a free code editor made by Microsoft. It helps you write and organize your code easily and has features like code highlighting, finding mistakes, and auto-suggestions to make your coding experience better.
 
 After downloading and installing VScode following the instructions on the website, open it on your end.
 It would be like this:
@@ -46,5 +46,11 @@ As you are connecting to the server, try some commands.
 Try to use commands like `cd`, `ls`, `pwd` to explore the file system like this:
 
 ![image](command.png)
+
+```
+cd - lets you move between folders in the computer's file system by just typing "cd" followed by the name of the folder you want to go to.
+ls - lists the files and folders in the current working directory.
+pwd - shows you the full path of the current directory you are in.
+```
 
 *This is the end of the tutorial.*
