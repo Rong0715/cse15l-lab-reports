@@ -48,7 +48,8 @@ Try to use commands like `cd`, `ls`, `pwd` to explore the file system like this:
 ![image](command.png)
 
 ```
-cd - lets you move between folders in the computer's file system by just typing "cd" followed by the name of the folder you want to go to.
+cd - lets you move between folders in the computer's file system 
+     by just typing "cd" followed by the name of the folder you want to go to.
 ls - lists the files and folders in the current working directory.
 pwd - shows you the full path of the current directory you are in.
 ```
