@@ -72,3 +72,57 @@ Below are my two screenshots of using `add-message`.
 
 ### PART 2: Bug from Lab 3
 
+For `ArrayExamples.java`'s `reverseInPlace()` method, one example of failure-inducing input could be:
+
+``` Java
+@Test 
+public void testReverseInPlace() {
+    int[] input = {1, 2, 3};
+    ArrayExamples.reverseInPlace(input);
+    assertArrayEquals(new int[]{3, 2, 1}, input);
+}
+```
+For the same method, one example of non-failure-inducing input could be:
+
+``` Java
+@Test 
+public void testReverseInPlace() {
+    int[] input = {1};
+    ArrayExamples.reverseInPlace(input);
+    assertArrayEquals(new int[]{1}, input);
+}
+```
+The symptom, as the output of running the tests:
+![alt text](5.png)
+![alt text](4.png)
+
+Below are `reverseInPlace()` before and after the fix.
+
+``` Java
+// BEFORE
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+        arr[i] = arr[arr.length - i - 1];
+    }
+}
+```
+
+``` Java
+// AFTER
+static void reverseInPlace(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+        newArray[i] = arr[arr.length - i - 1];
+    }
+    for (int i = 0; i < arr.length; i += 1){
+        arr[i] = newArray[i];
+    }
+}
+```
+In the fix, I created a new temperary array to store the change of the original array instead of making changes directly in the original array. This effectively avoided that the second half of the original array wasn't updated.
+
+---
+
+### PART 3: Conclusion
+
+A lot of things have been learned in the past two weeks. I got to host a local server for the first time, even though it was with a highly-completed template. I didn't know that by changing URL we are able to interact with people who are also visiting the local server. It gave me some clues how people at the beginning of the internet era connect with each other. 
